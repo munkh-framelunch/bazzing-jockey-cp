@@ -1,0 +1,31 @@
+body {
+  /*font-family: var(--fontFamily-notosans),  var(--fontFamily-montserrt), 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;*/
+  font-family: var(--fontFamily-base);
+  /*font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/
+  /*"Hiragino Kaku Gothic Pro", Meiryo, Osaka, "MS PGothic", sans-serif;*/
+  font-feature-settings: "palt";
+}
+@media all and (-ms-high-contrast:none){
+  *::-ms-backdrop, body  { font-family: Meiryo, Osaka, "MS PGothic", sans-serif; }
+}
+
+@media (--not-sp){
+  .pc{
+    visibility: visible;
+  }
+  .sp{
+    visibility: hidden;
+    display: none;
+    height: 0;
+  }
+}
+@media (--sp){
+  .pc{
+    visibility: hidden;
+    height: 0;
+    display: none;
+  }
+  .sp{
+    visibility: visible;
+  }
+}

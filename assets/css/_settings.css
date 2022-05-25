@@ -1,0 +1,104 @@
+@font-face {
+  font-family: YuGothicM;
+  src: local("Yu Gothic Medium");
+}
+
+:root {
+  /*
+   * z-index
+   */
+  --z-lv-1: 1;
+  --z-lv-2: 10;
+  --z-lv-3: 100;
+  --z-lv-4: 1000;
+  --z-lv-5: 10000;
+  --z-lv-6: 100000;
+  --z-lv-7: 1000000;
+  --z-lv-8: 10000000;
+  --z-lv-9: 100000000;
+  --z-lv-10: 1000000000;
+  --z-behindLv-1: -1;
+  --z-behindLv-2: -10;
+  --z-behindLv-3: -100;
+  --z-behindLv-4: -1000;
+  --z-behindLv-5: -10000;
+  --z-behindLv-6: -100000;
+  --z-behindLv-7: -1000000;
+  --z-behindLv-8: -10000000;
+  --z-behindLv-9: -100000000;
+  --z-behindLv-10: -1000000000;
+
+  /*
+   * font
+   * http://mw-s.jp/2017css-font-win-mac/
+   * http://silight.hatenablog.jp/entry/2015/07/02/214601
+   */
+  --fontFamily-base: "游ゴシック Medium", "YuGothic", "YuGothicM", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+  --fontFamily-mincho: "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HGS明朝E", "メイリオ", "Meiryo", serif;
+  --fontFamily-mono: monospace, serif;
+  --fontFamily-notosans: 'Noto Sans JP', sans-serif;
+  --fontFamily-montserrt: 'Montserrat', sans-serif;
+  --fontFamily-robot: 'Roboto', sans-serif;
+  --fontWeight-thin: 100;
+  --fontWeight-extraLight: 200;
+  --fontWeight-light: 300;
+  --fontWeight-normal: 400;
+  --fontWeight-medium: 500;
+  --fontWeight-semiBold: 600;
+  --fontWeight-bold: 700;
+  --fontWeight-extraBold: 800;
+  --fontWeight-black: 900;
+
+  /*
+   * easing
+   */
+  --easeIn-sine: cubic-bezier(0.47, 0, 0.745, 0.715);         /* http://easings.net/ja#easeInSine */
+  --easeOut-sine: cubic-bezier(0.39, 0.575, 0.565, 1);        /* http://easings.net/ja#easeOutSine */
+  --easeInOut-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);    /* http://easings.net/ja#easeInOutSine */
+  --easeIn-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);       /* http://easings.net/ja#easeInQuad */
+  --easeOut-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);       /* http://easings.net/ja#easeOutQuad */
+  --easeInOut-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);  /* http://easings.net/ja#easeInOutQuad */
+  --easeIn-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);     /* http://easings.net/ja#easeInCubic */
+  --easeOut-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);       /* http://easings.net/ja#easeOutCubic */
+  --easeInOut-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);    /* http://easings.net/ja#easeInOutCubic */
+  --easeIn-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);     /* http://easings.net/ja#easeInQuart */
+  --easeOut-quart: cubic-bezier(0.165, 0.84, 0.44, 1);        /* http://easings.net/ja#easeOutQuart */
+  --easeInOut-quart: cubic-bezier(0.77, 0, 0.175, 1);         /* http://easings.net/ja#easeInOutQuart */
+  --easeIn-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);     /* http://easings.net/ja#easeInQuint */
+  --easeOut-quint: cubic-bezier(0.23, 1, 0.32, 1);            /* http://easings.net/ja#easeOutQuint */
+  --easeInOut-quint: cubic-bezier(0.86, 0, 0.07, 1);          /* http://easings.net/ja#easeInOutQuint */
+  --easeIn-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);      /* http://easings.net/ja#easeInExpo */
+  --easeOut-expo: cubic-bezier(0.19, 1, 0.22, 1);             /* http://easings.net/ja#easeOutExpo */
+  --easeInOut-expo: cubic-bezier(1, 0, 0, 1);                 /* http://easings.net/ja#easeInOutExpo */
+  --easeIn-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);        /* http://easings.net/ja#easeInCirc */
+  --easeOut-circ: cubic-bezier(0.075, 0.82, 0.165, 1);        /* http://easings.net/ja#easeOutCirc */
+  --easeInOut-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);   /* http://easings.net/ja#easeInOutCirc */
+  --easeIn-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);      /* http://easings.net/ja#easeInBack */
+  --easeOut-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);    /* http://easings.net/ja#easeOutBack */
+  --easeInOut-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);   /* http://easings.net/ja#easeInOutBack */
+  --smooth: cubic-bezier(0.11, 0.85, 0.14, 1);
+  /*
+   * famous layouts
+   */
+  --size-ipad-long: 1024px;
+  --size-ipad-short: 768px;
+  --size-ipadPro10inch-long: 1112px;
+  --size-ipadPro10inch-short: 834px;
+
+  --formColor: #6e6e4c;
+  --baseColor: #8c9bd2;
+  --keyColor: #00ff0c;
+  --subColor: #9d9d9d;
+  --gray: #888;
+  --red: #dd141a;
+  --shadow: #cac39e;
+}
+
+/* major brepoakints */
+@custom-media --pc (max-width: 1599px);
+@custom-media --wide (max-width: 1359px);
+@custom-media --tablet (max-width: 1279px);
+@custom-media --sp (max-width: 767px);
+@custom-media --tb (min-width: 768px) and (max-width: 1023px);
+@custom-media --tb-h (min-width: 1024px) and (max-width: 1279px);
+@custom-media --not-sp (min-width: 768px);

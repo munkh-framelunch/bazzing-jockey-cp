@@ -1,0 +1,60 @@
+.-flex {
+  display: flex;
+}
+.-flex-wrap {
+  flex-wrap: wrap;
+}
+.-justify-space-beteeen {
+  justify-content: space-between;
+}
+.-justify-center {
+  justify-content: center;
+}
+.-justify-end {
+  justify-content: flex-end;
+}
+.-align-center {
+  align-items: center;
+}
+.-align-left {
+  align-items: flex-start;
+}
+
+.-relative {
+  position: relative;
+}
+.-absolute {
+  position: absolute;
+}
+.-fixed {
+  position: fixed;
+}
+.-fill {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.-abs-center {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.-contain {
+  background-size: contain;
+}
+
+.-cover {
+  background-size: cover;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}

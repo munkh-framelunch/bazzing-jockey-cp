@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "bazzing-eebb5"
+  },
+  "targets": {
+    "bazzing-eebb5": {
+      "hosting": {
+        "tck202203": [
+          "tck202203"
+        ]
+      }
+    }
+  }
+}

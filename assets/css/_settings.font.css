@@ -1,0 +1,20 @@
+.wf-notosansjapanese {
+  font-family: var(--fontFamily-notosans);
+}
+
+.font-mincho {
+  font-family: var(--fontFamily-mincho);
+}
+
+.font-montsant {
+  font-family: var(--fontFamily-montserrt);
+}
+
+
+.font-robot {
+  font-family: var(--fontFamily-robot);
+}
+
+.font-bold {
+  font-weight: bold;
+}
