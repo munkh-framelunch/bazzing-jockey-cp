@@ -13,6 +13,7 @@ const {
 } = process.env
 
 export default {
+  ssr: false,
   env: {
     /* API */
     FIREBASE_API_KEY,
@@ -34,6 +35,7 @@ export default {
     htmlAttrs: {
       lang: 'ja',
     },
+    title: 'TCK勝利ジョッキー予想キャンペーン',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -163,6 +165,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    'nuxt-microcms-module',
     [
       '@nuxtjs/google-gtag',
       {
@@ -171,6 +174,13 @@ export default {
       },
     ],
   ],
+  microcms: {
+    options: {
+      serviceDomain: 'swe5pp46ro', // YOUR_DOMAIN is the XXXX part of XXXX.microcms.io
+      apiKey: 'f5171897bbb3402aa93fc225bdc0994630a5',
+    },
+    mode: 'all',
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},

@@ -424,3 +424,145 @@ img {
     padding: 5% 0 10%;
   }
 }
+.table-model-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1080px;
+  background-color: #ebebeb;
+  padding: 10px 10px 48px;
+  max-height: 95vh;
+  overflow-y: auto;
+  @media (--wide) {
+    padding-bottom: 3.5vw;
+  }
+  @media (--sp) {
+    width: 100%;
+    padding: 5px 5px 5vw;
+  }
+}
+.table-model-close {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  width: 30px;
+  height: 30px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  transform: translateY(-50%);
+  @media (--sp) {
+    transform: translateY(-50%) scale(0.6);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    transform: rotate(45deg);
+    transform-origin: center;
+    background-color: #fff;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    background-color: #fff;
+  }
+}
+.table-model-head {
+  background-color: #000;
+  color: #fff;
+  padding: 2.5% 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  @media (--wide) {
+    font-size: 1.7vw;
+  }
+  @media (--sp) {
+    font-size: 3.7vw;
+    padding: 4% 0;
+  }
+}
+.table-model-scroll {
+  width: 92%;
+  margin: 4% auto;
+  background-color: #fff;
+  padding: 3.3%;
+  @media (--sp) {
+    width: 96%;
+  }
+}
+.table-model-inside {
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.table-head {
+  display: flex;
+}
+.table-row {
+  display: flex;
+}
+.td {
+  font-size: 19px;
+  padding: 1.5% 0;
+  border-top: 1px solid #d3d3d3;
+  @media (--wide) {
+    font-size: 1.4vw;
+  }
+  @media (--sp) {
+    font-size: 2.5vw;
+    padding: 2.5% 0;
+  }
+}
+.td.hide {
+  opacity: 0;
+}
+.table-model-button {
+  width: 44%;
+  padding: 2.5% 0;
+  background-color: #d70c19;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1;
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 auto;
+  transition: 0.4s ease-in-out;
+  @media (--wide) {
+    font-size: 1.6vw;
+  }
+  @media (--sp) {
+    width: 70%;
+    font-size: 3vw;
+    padding: 4% 0;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.th {
+  font-size: 12px;
+  padding: 5px 0;
+  border-top: none;
+  border-bottom: 1px solid #d3d3d3;
+  @media (--sp) {
+    font-size: 1.6vw;
+  }
+}
+.table-row:nth-child(1) .td {
+  border-top: none;
+}

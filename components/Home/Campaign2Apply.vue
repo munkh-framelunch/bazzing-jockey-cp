@@ -29,16 +29,7 @@
             >
             <div class="twitter-text-bottom"></div>
           </div>
-          <div
-            class="
-              apply-item
-              no-bottom
-              anime
-              trigger
-              hide-fade hide-down
-              delay2
-            "
-          >
+          <div class="apply-item no-bottom anime trigger hide-fade hide-down">
             <div class="apply-item-number font-en">STEP 2</div>
             <div class="apply-item-body">
               <div class="apply-text">
@@ -46,10 +37,11 @@
                 キャンペーンツイートを引用RTし<br />
                 <span class="is-green">#TCK重賞勝利ジョッキーを当てろ</span
                 >と<br />
-                <span class="is-blue">#対象レース名</span>と<span class="is-red"
-                  >＃「勝利騎手の名前」</span
-                >を付けて、<br />
-                Twitterに投稿しよう！
+                <span class="is-blue">#対象レース名</span>と<br
+                  class="is-sp"
+                /><span class="is-red">＃「勝利騎手の名前(フルネーム)」</span
+                ><br />
+                を付けて、Twitterに投稿しよう！
               </div>
               <div class="cp2-howto">
                 <img src="/images/pc/cp2_howto_img.png" />

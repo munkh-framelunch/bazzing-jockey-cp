@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-export function scrollTo(target) {
+export default function scrollTo(target) {
   const rect = target.getBoundingClientRect()
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop
   const targetTop = rect.top + scrollTop

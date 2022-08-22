@@ -52,6 +52,7 @@
                     <div class="item-number">{{ item.n }}</div>
                     <div class="item-text" v-html="item.t"></div>
                     <div class="item-b">{{ item.b }}</div>
+                    <div :class="{ 'item-over': checkDate(item) }"></div>
                   </div>
                 </div>
                 <div class="items-comment">
@@ -103,6 +104,7 @@
   </div>
 </template>
 <script>
+import moment from 'moment'
 import SubTitle from './SubTitle.vue'
 import Bottom from './Campaign2Apply.vue'
 import Contact from './Contact.vue'
@@ -116,16 +118,38 @@ export default {
   data() {
     return {
       items: [
-        { y: '2022', d: '4.20', n: '第33回', t: '東京スプリント', b: 'JpnIII' },
+        {
+          y: '2022',
+          d: '4.20',
+          n: '第33回',
+          t: '東京スプリント',
+          b: 'JpnIII',
+          over: true,
+        },
         {
           y: '2022',
           d: '4.21',
           n: '第5回',
           t: 'ブリリアントカップ',
           b: 'SIII',
+          over: true,
         },
-        { y: '2022', d: '5.11', n: '第36回', t: '東京プリンセス賞', b: 'SI' },
-        { y: '2022', d: '5.25', n: '第67回', t: '大井記念', b: 'SI' },
+        {
+          y: '2022',
+          d: '5.11',
+          n: '第36回',
+          t: '東京プリンセス賞',
+          b: 'SI',
+          over: true,
+        },
+        {
+          y: '2022',
+          d: '5.25',
+          n: '第67回',
+          t: '大井記念',
+          b: 'SI',
+          over: true,
+        },
         { y: '2022', d: '6.28', n: '第12回', t: '優駿スプリント', b: 'SII' },
         { y: '2022', d: '6.29', n: '第45回', t: '帝王賞', b: 'JpnI' },
         {
@@ -181,6 +205,15 @@ export default {
         { y: '2023', d: '3.29', n: '第46回', t: '京浜盃', b: 'SII' },
       ],
     }
+  },
+  methods: {
+    checkDate(val) {
+      const date = val.d.split('.')
+      const m = parseInt(date[0]) < 10 ? `0${date[0]}` : date[0]
+      const d = parseInt(date[1]) < 10 ? `0${date[1]}` : date[1]
+      const current = moment(`${val.y}-${m}-${d}`)
+      return current.isBefore()
+    },
   },
 }
 </script>
@@ -329,6 +362,28 @@ export default {
   padding: 5% 0 2%;
   @media (--sp) {
     padding: 5% 0 10%;
+  }
+}
+.item-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.2;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  @media (--wide) {
+    font-size: 1.5vw;
+  }
+  @media (--sp) {
+    font-size: 3.7vw;
   }
 }
 .present-items {
