@@ -1,7 +1,7 @@
 <template>
   <div class="kv">
-    <img src="/images/pc/kv.jpg" class="is-pc" />
-    <img src="/images/sp/kv.jpg" class="is-sp" />
+    <img src="/images/pc/kv_old.jpg" class="is-pc" />
+    <img src="/images/sp/kv_old.jpg" class="is-sp" />
     <div class="gold-banner goto" data-to="table-section">
       <img src="/images/pc/kv_bnr.png" />
     </div>
@@ -24,7 +24,6 @@
   width: 18%;
   margin-top: 6.25%;
   cursor: pointer;
-  display: none;
   @media (--sp) {
     display: none;
   }

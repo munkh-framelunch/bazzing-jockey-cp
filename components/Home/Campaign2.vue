@@ -54,9 +54,38 @@
                     <div class="item-b">{{ item.b }}</div>
                     <div :class="{ 'item-over': checkDate(item) }"></div>
                   </div>
+                  <div class="item">
+                    <div class="item-head">
+                      <div class="item-head-year">2023</div>
+                      <div class="item-head-date">3.29</div>
+                    </div>
+                    <div class="item-number">第46回</div>
+                    <div class="item-text">京浜盃</div>
+                    <div class="item-b">SII</div>
+                    <div class="item-over1"></div>
+                  </div>
                 </div>
-                <div class="items-comment">
-                  ※羽田盃、東京ダービー、JDD、マイルグランプリ、黒潮盃、東京記念は対象外となります。
+                <div class="items-flex">
+                  <div class="items-comment">
+                    ※羽田盃、東京ダービー、JDD、マイルグランプリ、黒潮盃、東京記念は対象外となります。<br />
+                    <span
+                      >※本キャンペーンはフジノウェーブ記念で終了とさせていただきます。</span
+                    ><br />
+                    <span
+                      >※京浜盃は「マンダリンヒーロー号応援！Twitterメッセージキャンペーン」に変更となります。</span
+                    ><br />
+                    <span
+                      >※「マンダリンヒーロー号応援！Twitterメッセージキャンペーン」へのご参加は赤色ボタンから！</span
+                    >
+                  </div>
+                  <a
+                    href="https://www.tokyocitykeiba.com/rd/event/202201"
+                    target="_blank"
+                    class="campaign-button is-arrow is-center"
+                  >
+                    マンダリンヒーロー号応援！<br />
+                    Twitterメッセージキャンペーン
+                  </a>
                 </div>
               </div>
               <div class="cp2-spacer"></div>
@@ -202,7 +231,6 @@ export default {
           t: 'フジノウェーブ記念',
           b: 'SIII',
         },
-        { y: '2023', d: '3.29', n: '第46回', t: '京浜盃', b: 'SII' },
       ],
     }
   },
@@ -345,15 +373,21 @@ export default {
   }
 }
 .items-comment {
-  font-size: 16px;
+  font-size: 14px;
   padding: 2% 0 0;
+  line-height: 2;
   @media (--wide) {
-    font-size: 1.1vw;
+    font-size: 0.9vw;
   }
   @media (--sp) {
-    font-size: 2.5vw;
+    font-size: 2.4vw;
     padding: 4% 2.5% 6%;
+    width: 100%;
+    margin-bottom: 4%;
   }
+}
+.items-comment span {
+  color: var(--red);
 }
 .cp2-spacer {
   padding-top: 11%;
@@ -384,6 +418,33 @@ export default {
   }
   @media (--sp) {
     font-size: 3.7vw;
+  }
+}
+.item-over1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.2;
+  white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 100;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140%;
+    border-top: 1px solid var(--red);
+    transform: rotate(-43.8deg);
+    transform-origin: center right;
   }
 }
 .present-items {
@@ -439,6 +500,14 @@ export default {
   @media (--sp) {
     padding-top: 0;
     padding-bottom: 10%;
+  }
+}
+.items-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (--sp) {
+    flex-wrap: wrap;
   }
 }
 </style>

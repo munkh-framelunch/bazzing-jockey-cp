@@ -1,7 +1,9 @@
 <template>
   <div class="main">
     <Kv />
+    <!--
     <Campaign3 />
+    -->
     <KvBottom :rate="rate" :items="table1 || rateHolder" />
     <Campaign1 />
     <Campaign2 />
@@ -21,7 +23,7 @@ import Kv from '~/components/Home/Kv.vue'
 import KvBottom from '~/components/Home/KvBottom.vue'
 import Campaign1 from '~/components/Home/Campaign1.vue'
 import Campaign2 from '~/components/Home/Campaign2.vue'
-import Campaign3 from '~/components/Home/Campaign3.vue'
+// import Campaign3 from '~/components/Home/Campaign3.vue'
 import Footer from '~/components/Home/Footer.vue'
 import Model from '~/components/Model'
 import Model1 from '~/components/Model1'
@@ -39,7 +41,7 @@ export default {
     KvBottom,
     Campaign1,
     Campaign2,
-    Campaign3,
+    // Campaign3,
     Footer,
     Menu,
     Links,
@@ -51,15 +53,15 @@ export default {
   async asyncData({ $microcms }) {
     const data1 = await $microcms.get({
       endpoint: 'final',
-      queries: { limit: 40 },
+      queries: { limit: 120 },
     })
     const data2 = await $microcms.get({
       endpoint: 'group',
-      queries: { limit: 40 },
+      queries: { limit: 120 },
     })
     const data3 = await $microcms.get({
       endpoint: 'rate',
-      queries: { limit: 40 },
+      queries: { limit: 120 },
     })
     return {
       table1: data1.contents,

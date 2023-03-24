@@ -272,6 +272,21 @@ img {
       }
     }
   }
+  &.is-center {
+    text-align: center;
+    margin-right: 0;
+    @media (--sp) {
+      width: 90vw;
+      height: 20vw;
+      margin-right: auto;
+      &::after {
+        right: 3%;
+      }
+      &::before {
+        right: 3%;
+      }
+    }
+  }
 }
 .apply-header {
   background-image: url('/images/pc/howto_bg.png');
