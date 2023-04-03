@@ -78,14 +78,14 @@
                       >※「マンダリンヒーロー号応援！Twitterメッセージキャンペーン」へのご参加は赤色ボタンから！</span
                     >
                   </div>
-                  <a
-                    href="https://www.tokyocitykeiba.com/rd/event/202201"
-                    target="_blank"
-                    class="campaign-button is-arrow is-center"
-                  >
+                  <div class="campaign-button is-arrow is-center is-over">
                     マンダリンヒーロー号応援！<br />
                     Twitterメッセージキャンペーン
-                  </a>
+                    <div class="campaign-ending">
+                      このキャンペーン<br />
+                      終了しました。
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="cp2-spacer"></div>
@@ -509,5 +509,25 @@ export default {
   @media (--sp) {
     flex-wrap: wrap;
   }
+}
+.campaign-button {
+  position: relative;
+}
+.campaign-ending {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  z-index: 10;
+}
+.is-over {
+  cursor: inherit !important;
 }
 </style>
